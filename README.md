@@ -1,3 +1,3 @@
 # img-ex
-### master branch
+### img-ex-1
 expand img on click
