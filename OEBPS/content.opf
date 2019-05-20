@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="dcidid" version="2.0">
+
+   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:opf="http://www.idpf.org/2007/opf">	
+	<dc:title>EDU645</dc:title>
+	<dc:language xsi:type="dcterms:RFC3066">en</dc:language>
+	<meta name="cover" content="cover"/>
+	<dc:identifier id="dcidid">AUGEN103.14.1</dc:identifier>
+	<dc:subject>Principles of Marketing</dc:subject>
+	<dc:creator>Sarah White</dc:creator>
+	<dc:publisher>Bridgepoint Education Inc.</dc:publisher>
+	<dc:date xsi:type="dcterms:W3CDTF">2018-02-26</dc:date>
+	<dc:rights>Copyright (c) 2019 Bridgepoint Education, Inc., all rights reserved</dc:rights>
+   </metadata>
+  
+  
+  <manifest>
+    <item href="test01.html" id="test01" media-type="application/xhtml+xml" />
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+	<item href="Styles/mobile.css" id="xmobile.css" media-type="text/css" />   
+    <item href="Styles/style.css" id="xstyle.css" media-type="text/css" />
+    <item href="Scripts/app-min.js" id="app-min.js" media-type="text/javascript" />
+	<item href="Images/co1.jpg" id="xco1.jpg" media-type="image/jpeg" />
+	<item href="Images/co1_sq.jpg" id="xco1_sq.jpg" media-type="image/jpeg" />
+	<item href="Images/co2.jpg" id="xco2.jpg" media-type="image/jpeg" />
+	<item href="Images/landscape1.jpg" id="xlandscape1.jpg" media-type="image/jpeg" />
+	<item href="Images/landscape2.jpg" id="xlandscape2.jpg" media-type="image/jpeg" />
+    <item href="Images/landscape3.jpg" id="xlandscape3.jpg" media-type="image/jpeg" /> 
+    <item href="Images/landscape4.jpg" id="xlandscape4.jpg" media-type="image/jpeg" /> 
+	<item href="Images/portrait1.jpg" id="xportrait1.jpg" media-type="image/jpeg" />
+	<item href="Images/f1.jpg" id="xf1.jpg" media-type="image/jpeg" />
+	<item href="Images/f2.jpg" id="xf2.jpg" media-type="image/jpeg" />
+	<item href="Images/f3.jpg" id="xf3.jpg" media-type="image/jpeg" />
+	<item href="Images/f4.jpg" id="xf4.jpg" media-type="image/jpeg" /> 
+    <item href="Images/header-classroom.jpg" id="xheader-classroom.jpg" media-type="image/jpeg" />  	
+	<item href="Images/section-header.jpg" id="xsection-header.jpg" media-type="image/jpeg" />
+      
+	<item href="Images/arrow.png" id="xarrow.png" media-type="image/png" />
+	<item href="Images/bulb-icon.png" id="xbulb-icon.png" media-type="image/png" />
+	<item href="Images/focus-question.png" id="xfocus-question.png" media-type="image/png" />
+	<item href="Images/list-check.png" id="xlist-check.png" media-type="image/png" />
+	<item href="Images/section-number-bg.png" id="xsection-number-bg.png" media-type="image/png" />
+	<item href="Images/section-seperator1.png" id="xsection-seperator1.png" media-type="image/png" />
+	<item href="Images/section-seperator2.png" id="xsection-seperator2.png" media-type="image/png" />
+	<item href="Images/section-seperator3.png" id="xsection-seperator3.png" media-type="image/png" />
+	<item href="Images/section-seperator4.png" id="xsection-seperator4.png" media-type="image/png" />
+	<item href="Images/section-seperator5.png" id="xsection-seperator5.png" media-type="image/png" />      
+    	
+
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="test01" /> 	
+  </spine>
+
+</package>
+

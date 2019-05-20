@@ -1,0 +1,104 @@
+@media only screen and (max-width: 750px) {
+  
+
+.chapter-header {
+	padding: 82px 6%;	
+}
+	.co_intro {
+		width: 100%;
+		padding: 32px 8%;
+	}
+	.co_aside {
+		width: 100%;
+		float: none;
+		padding-top: 80%;
+	}
+	.quote_text {
+		padding: 18px 8% 0px;
+	}
+
+.section-header h1 {
+	background: none !important; 
+ }
+ 	.section-header h1 .sec_number {
+		float: none;
+		padding-bottom: 24px;
+		background: #c92b56;
+		margin: 0px auto;
+	}
+	.section-header h1 {
+	text-align:center;	
+	}
+	
+	
+.customCol-0 p, .customCol-0 ol, .customCol-0 ul {
+	width: 90%;	
+}
+ 
+ 
+ .right-column {
+	width: 100%;
+	float:none;
+	display:block;
+	clear:both;
+	margin: 0px auto;
+	padding: 12px 12%;
+	
+ }
+ 
+ .figure-1 img {
+	width: 100%;
+	margin: 12px auto;
+ }
+ .figure-1 figcaption {
+	float: none;
+	width: 90%;
+	margin: 12px auto;
+ }
+ 
+ 
+ .customCol-1 {
+	padding: 180px 32px 32px;
+	background: #C92B56 url('Images/bulb-icon.png') no-repeat center 24px;
+	text-align:center;
+ }
+ 
+ 
+ .photo-left, .photo-right, .photo-right img {
+	float: none;
+	margin: 0px auto;
+	width: 100%;
+ }
+ 	.photo-right figcaption {
+		width: 100%;
+		margin: 12px 0px 24px;
+	}
+ 
+ 
+ table.tbl-xl {
+	width: 100%; 
+ }
+	 table.tbl-xl .tbl_name {
+		max-width: 100%;
+		position:relative;
+		top: 0px;
+		left: 0px;
+		text-align: center;
+	 }
+	 
+	 
+[class^="article-custom-"] {
+	position: relative;
+	padding: 0px;
+}
+	[class^="article-custom-"] h2.h2, [class^="article-custom-"] h3.h3, [class^="article-custom-"] h4.h4 {
+		position: relative;
+		width: 100%;
+		display:block;
+		margin-bottom: 24px;
+	}
+		[class^="article-custom-"] .article-custom_title {
+			position: relative;
+		}
+ 
+ }

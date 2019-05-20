@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+  <head>
+    <meta content="urn:uuid:7536EB79-979A-473F-A5EE-83C9B4F09516" name="dtb:uid"/>
+    <meta content="2" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>EDU 645 v2.a</text>
+  </docTitle>
+<navMap>
+
+<navPoint id="test1.0" playOrder="1"><navLabel><text>Ch 1: Introduction to Learning and Assessment</text></navLabel><content src="test01.html#test1.0"/>
+	<navPoint id="test1.1" playOrder="2"><navLabel><text>1.1 Introduction</text></navLabel><content src="test01.html#test1.1"/></navPoint>
+	<navPoint id="test1.2" playOrder="3"><navLabel><text>1.2 Purposes and Types of Assessment</text></navLabel><content src="test01.html#test1.2"/></navPoint>
+	<navPoint id="test1.3" playOrder="4"><navLabel><text>1.3 Uses of Assessment in the Classroom</text></navLabel><content src="test01.html#test1.3"/></navPoint>
+	<navPoint id="test1.4" playOrder="5"><navLabel><text>1.4 The Curriculum Planning-Assessment-Teaching Cycle</text></navLabel><content src="test01.html#test1.4"/></navPoint>
+	<navPoint id="test1.5" playOrder="6"><navLabel><text>1.5 Educational Goals and Assessment</text></navLabel><content src="test01.html#test1.5"/></navPoint>
+	<navPoint id="test1.6" playOrder="7"><navLabel><text>1.6 The Implications of ESSA</text></navLabel><content src="test01.html#test1.6"/></navPoint>
+	<navPoint id="test1.7" playOrder="8"><navLabel><text>1.7 High-Stakes Testing</text></navLabel><content src="test01.html#test1.7"/></navPoint>
+	<navPoint id="test1.8" playOrder="9"><navLabel><text>1.8 The Implications of IDEA</text></navLabel><content src="test01.html#test1.8"/></navPoint>
+	<navPoint id="test1.9" playOrder="10"><navLabel><text>1.9 Test Fairness and the Ethics of Assessment</text></navLabel><content src="test01.html#test1.9"/></navPoint>
+	<navPoint id="test1.10" playOrder="11"><navLabel><text>1.10 Student Rights and Responsibilities in Assessment</text></navLabel><content src="test01.html#test1.10"/></navPoint>
+	<navPoint id="test1.11" playOrder="12"><navLabel><text>1.11 Self-Assessment</text></navLabel><content src="test01.html#test1.11"/></navPoint>
+	<navPoint id="test1.12" playOrder="13"><navLabel><text>1.12 What Works in Education?</text></navLabel><content src="test01.html#test1.12"/></navPoint>
+	<navPoint id="test1.13" playOrder="14"><navLabel><text>Chapter 1 Themes and Questions</text></navLabel><content src="test01.html#test1.13"/></navPoint>
+</navPoint>
+
+
+
+ </navMap>
+</ncx>
