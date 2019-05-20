@@ -2,5 +2,7 @@
 .Thumbs_db
 *.epub
 tests/
+*.jpg
+*.png
 
 *.codekit3
