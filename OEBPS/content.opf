@@ -10,11 +10,11 @@
 	<dc:language xsi:type="dcterms:RFC3066">en</dc:language>
 	<meta name="cover" content="cover"/>
 	<dc:identifier id="dcidid">imgXL</dc:identifier>
-	<dc:subject>Principles of Marketing</dc:subject>
-	<dc:creator>Sarah White</dc:creator>
-	<dc:publisher>Bridgepoint Education Inc.</dc:publisher>
+	<dc:subject>image englaring test</dc:subject>
+	<dc:creator>Zovio Editorial</dc:creator>
+	<dc:publisher>Zovio</dc:publisher>
 	<dc:date xsi:type="dcterms:W3CDTF">2018-02-26</dc:date>
-	<dc:rights>Copyright (c) 2019 Bridgepoint Education, Inc., all rights reserved</dc:rights>
+	<dc:rights>Copyright (c) 2019 Zovio, Inc., all rights reserved</dc:rights>
    </metadata>
   
   

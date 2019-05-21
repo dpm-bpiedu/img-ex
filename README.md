@@ -1,4 +1,4 @@
 # img-ex
-### img-ex-1
-expand img on click
-art only
+### img-ex-2
+
+refactoring img-ex-1
