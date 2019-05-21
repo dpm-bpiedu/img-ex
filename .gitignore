@@ -4,5 +4,6 @@
 tests/
 *.jpg
 *.png
+*.psd
 
 *.codekit3
