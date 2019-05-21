@@ -6,10 +6,10 @@
  xmlns:dcterms="http://purl.org/dc/terms/"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:opf="http://www.idpf.org/2007/opf">	
-	<dc:title>EDU645</dc:title>
+	<dc:title>imgXL</dc:title>
 	<dc:language xsi:type="dcterms:RFC3066">en</dc:language>
 	<meta name="cover" content="cover"/>
-	<dc:identifier id="dcidid">AUGEN103.14.1</dc:identifier>
+	<dc:identifier id="dcidid">imgXL</dc:identifier>
 	<dc:subject>Principles of Marketing</dc:subject>
 	<dc:creator>Sarah White</dc:creator>
 	<dc:publisher>Bridgepoint Education Inc.</dc:publisher>
@@ -48,7 +48,8 @@
 	<item href="Images/section-seperator2.png" id="xsection-seperator2.png" media-type="image/png" />
 	<item href="Images/section-seperator3.png" id="xsection-seperator3.png" media-type="image/png" />
 	<item href="Images/section-seperator4.png" id="xsection-seperator4.png" media-type="image/png" />
-	<item href="Images/section-seperator5.png" id="xsection-seperator5.png" media-type="image/png" />      
+	<item href="Images/section-seperator5.png" id="xsection-seperator5.png" media-type="image/png" />
+	<item href="Images/img_screen.png" id="ximg_screen.png" media-type="image/png" />      
     	
 
   </manifest>

@@ -1160,24 +1160,26 @@ misc
 		color: #C92B56;
     }
     
-div.img_screen {
+figure.figure_enlarged {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 100%;
-    z-index: 1;
-    opacity: .75;
-    background-color: black;
+    z-index: 4600;
+    background-image: url(../Images/img_screen.png);
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
 }
 
 img.img_enlarged {
-    position: fixed;
-    top: 55px;
+    position: absolute;
+    top: 60px;
+    height: 85%;
     left: 0;
     right: 0;
-    margin-left: auto;
     margin-right: auto;
-    max-height: 90%;
-    z-index: 2;
+    margin-left: auto;
+
 }

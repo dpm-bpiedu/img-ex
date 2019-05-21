@@ -2,7 +2,7 @@
 
 	// Constants
 	const hasFigures = document.querySelectorAll('.figure_name');
-	const b = document.querySelector("body");
+	const b = document.querySelector("section.page");
 
 	const sortFigures = () => {
 		const allFigures = document.querySelectorAll('figure');
@@ -18,73 +18,94 @@
 
 	};
 
-	const closeImage = (evt, imgObj) => {
-		const screen = document.querySelector("div.img_screen");
-		console.log(evt.target);
-		imgObj.remove();
-		screen.remove();
+	const closeFigure = (evt, figureObj) => {
+		let image = figureObj.querySelector('img');
+		image.remove();
+		figureObj.remove();
 	}
+
+	const setAttributes = (el, attrs) => {
+		Object.keys(attrs).forEach(function (attr) {
+			el.setAttribute(attr, attrs[attr]);
+		});		
+	}
+
 
 	const createFigure = (imgAttrs) => {
 
-		function setAttributes(el, attrs) {
-			Object.keys(attrs).forEach(function (attr) {
-				el.setAttribute(attr, attrs[attr]);
-			});
+		const figure = document.createElement("figure");
+		const image = document.createElement("img");
+
+		figure.setAttribute("class", "figure_enlarged");
+		setAttributes(figure, {
+			class: 'figure_enlarged',
+			tabindex: '0'
+		});
+		setAttributes(image, imgAttrs);
+		figure.addEventListener("click", function(evt){closeFigure(evt, this)}, false);
+		figure.addEventListener("keyup", function(evt){closeFigure(evt, this)}, false);
+
+		
+
+		figure.appendChild(image);
+		b.appendChild(figure);
+
+		figure.focus();
+
+	}
+
+	const checkEvt = (evt, imgObj) => {
+		evt.type === "click" ? handleClick(evt, imgObj) : handleKeyup(evt, imgObj);
+
+		function handleClick(evt, imgObj) {
+			eventResponse(evt, imgObj);
+			evt.target.removeEventListener("keyup", function(evt) {checkEvt(evt, this)}, false);
 		}
 
-		const screen = document.createElement("div");
-		const image = document.createElement("img");
-		screen.setAttribute("class", "img_screen");
-		setAttributes(image, imgAttrs);
+		function handleKeyup(evt, imgObj) {
+			evt.preventDefault();
+			if(evt.keyCode === 9) {
+				return;
+			} else {
+				eventResponse(evt, imgObj);
+			}
+			evt.target.removeEventListener("keyup", function(evt) {checkEvt(evt, this)}, false);
+		}
 
-		image.addEventListener("click", function(evt){closeImage(evt, this)}, false);
+		function eventResponse(evt, omgObj) {
+			let imgAttrs = {
+				title: 'click to close image',
+				class: 'img_enlarged',
+				style: 'cursor: pointer;',
+				src: imgObj.getAttribute('src'),
+				alt: imgObj.getAttribute('alt')
+			}
 
-		//b.appendChild(screen);
-	//	b.appendChild(image);
-		b.prepend(screen);
-		b.prepend(image);
+			createFigure(imgAttrs);
 
-	}
+		}
 
-	const imgEnlarge = (evt, imgObj) => {
-		let imgAttrs = {
-			title: 'click to close image',
-			class: 'img_enlarged',
-			style: 'cursor: pointer;'
-		};
-
-		imgAttrs.src = imgObj.getAttribute("src");
-		imgAttrs.alt = imgObj.getAttribute("alt");
-
-		createFigure(imgAttrs);
-
-	}
-
-
+	};
 
 	const handleImage = (imgObj) => {
-		imgObj.style.cursor = ('pointer');
-		imgObj.setAttribute("title", "click to enlarge image");
-		imgObj.addEventListener("click", function(evt) {imgEnlarge(evt, this)}, false);
+		setAttributes(imgObj,{
+			role: 'button',
+			tabindex: '0',
+			style: 'cursor: pointer',
+			title: 'click to enlarge this image'
+		});
+	
+		imgObj.addEventListener("click", function(evt) {checkEvt(evt, this)}, false);
+		imgObj.addEventListener("keyup", function(evt) {checkEvt(evt, this)}, false);
 	}
-
-
-
 
 	// Initialize 
 
-
-
 	if(hasFigures.length) {
 		sortFigures();
-	} else {
-		console.log('This page does NOT have figures');
+	} else {		
 		return;
 	}
-
-
-
 
 
 
