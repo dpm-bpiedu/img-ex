@@ -57,6 +57,11 @@ const constellationImgEnlarge = () => {
     figureObj.remove();
   };
 
+  /**
+   * TODO: refactor using utility functions above
+   * @param {object} imgAttrs 
+   */
+
   const createFigure = imgAttrs => {
     const figure = document.createElement("figure");
     const image = document.createElement("img");
@@ -74,7 +79,7 @@ const constellationImgEnlarge = () => {
     section.appendChild(figure);
 
     figure.focus();
-    
+
   };
 
   const handleEvt = (evt, imgObj) => {
