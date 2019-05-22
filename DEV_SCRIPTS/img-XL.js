@@ -5,8 +5,8 @@ const constellationImgEnlarge = () => {
    * hasFigures used in intialization. If false, returns
    * section is main page element; enlarged image appended to it
    */
-  
-  const hasFeature = document.querySelectorAll(".figure_name").length > 0;
+  const featuresArray = [...querySelectorAll('.figure_name')];
+  const hasFeature = featuresArray.length > 0;
   const section = document.querySelector("section.page");
 
   /**
