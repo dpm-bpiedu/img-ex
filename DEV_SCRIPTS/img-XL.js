@@ -29,13 +29,13 @@ const constellationImgEnlarge = () => {
 
   /**
    * APPLICATION LOGIC
-   * Sort "figure" images from "photo" images
-   * Change title attribute of figures
-   * On click/keyboard evt, capture image attributes: src, alt; 
+   * Seperate "figure" images from "photo" images
+   * Change title attribute of figures to "click to enlarge image"
+   * On click/keyboard evt, capture image attributes: src, alt,
    * and set title attribute.
    * 
-   * With capture attributes, create new figure and append to DOM,
-   * Use css to cover window. 
+   * With captured attributes, create new figure and append to DOM,
+   * Use css to place figure on top of window. 
    * Add click/keyboard events to remove from DOM when user closes.
    */
 
