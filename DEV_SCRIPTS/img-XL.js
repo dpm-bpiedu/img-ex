@@ -5,7 +5,7 @@ const constellationImgEnlarge = () => {
    * hasFigures used in intialization. If false, returns
    * section is main page element; enlarged image appended to it
    */
-  const featuresArray = [...querySelectorAll('.figure_name')];
+  const featuresArray = [...document.querySelectorAll('.figure_name')];
   const hasFeature = featuresArray.length > 0;
   const section = document.querySelector("section.page");
 
@@ -16,9 +16,10 @@ const constellationImgEnlarge = () => {
    */
 
   const setAttributes = (el, attrs) => {
-    Object.keys(attrs).forEach(function(attr) {
-      el.setAttribute(attr, attrs[attr]);
-    });
+    let keysArray = Object.keys(attrs);
+    for(var i = 0; i < keysArray.length; i++) {
+      el.setAttribute(keysArray[i], attrs[keysArray[i]]);
+    }
   };
 
   const createElem = (el, attrs) => {
@@ -41,16 +42,20 @@ const constellationImgEnlarge = () => {
 
   const sortFigures = () => {
 
-    const allFigures = document.querySelectorAll("figure");
+    const allFigures = [...document.querySelectorAll("figure")];
 
-    allFigures.forEach((figure) => {
-      if (figure.querySelector(".figure_name")) {
-        let image = figure.querySelector("img");
-        handleImage(image);
-      } else {
-        return;
-      }
-    });
+    for(var i = 0;i < allFigures.length; i++) {
+      let currentFigure = allFigures[i];
+      let isFigure = currentFigure.querySelector('.figure_name') != undefined;
+
+      if(isFigure) {
+        let currentImage = currentFigure.querySelector('img');
+        console.log(currentImage);
+        handleImage(currentImage);
+      } 
+      
+    }
+
   };
 
   const handleImage = imgObj => {
