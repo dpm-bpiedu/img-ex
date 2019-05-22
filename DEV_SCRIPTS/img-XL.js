@@ -50,7 +50,6 @@ const constellationImgEnlarge = () => {
 
       if(isFigure) {
         let currentImage = currentFigure.querySelector('img');
-        console.log(currentImage);
         handleImage(currentImage);
       } 
       
