@@ -1,8 +1,8 @@
 const constellationExpandCollapse = () => {
 
-
-    var toggleBtns = document.querySelectorAll("[aria-expanded][aria-controls]");
-    var isCollapsed, currentString, currentContent, currentToggle, ecString, ecContent, collapseBtn;
+    const toggleBtns = document.querySelectorAll("[aria-expanded][aria-controls]");
+    const hasFeature = toggleBtns.length > 0;
+    let isCollapsed, currentString, currentContent, currentToggle, ecString, ecContent, collapseBtn;
 
     function ecToggle(currentObj) {
         isCollapsed = currentObj.getAttribute("aria-expanded") === "false";
@@ -26,18 +26,25 @@ const constellationExpandCollapse = () => {
 
     }
 
-    toggleBtns.forEach(function(btn) {
-        ecString = btn.getAttribute("aria-controls");
-        ecContent = document.querySelector("#"+ ecString);
-        collapseBtn = document.querySelector("[name='" + ecString + "']");
+    function initFeature() {
+        toggleBtns.forEach(function(btn) {
+            ecString = btn.getAttribute("aria-controls");
+            ecContent = document.querySelector("#"+ ecString);
+            collapseBtn = document.querySelector("[name='" + ecString + "']");
+    
+            ecContent.classList.add("ec_collapsed");
+            btn.addEventListener("click", function() {ecToggle(this)}, false);
+            collapseBtn.addEventListener("click", function() {ecCollapse(this)}, false);
+    
+       }); 
+    }
 
-        ecContent.classList.add("ec_collapsed");
-        btn.addEventListener("click", function() {ecToggle(this)}, false);
-        collapseBtn.addEventListener("click", function() {ecCollapse(this)}, false);
-
-   });       
- 
-
+    if(hasFeature) {
+        initFeature();
+    } else {
+        return;
+    }
+  
 };
 
 export default constellationExpandCollapse;

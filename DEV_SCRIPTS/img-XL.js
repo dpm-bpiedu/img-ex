@@ -1,13 +1,18 @@
 const constellationImgEnlarge = () => {
+  
   /**
    * CONSTANTS
+   * hasFigures used in intialization. If false, returns
+   * section is main page element; enlarged image appended to it
    */
 
-  const hasFigures = document.querySelectorAll(".figure_name").length > 0;
+  const hasFeature = document.querySelectorAll(".figure_name").length > 0;
   const section = document.querySelector("section.page");
 
   /**
    * UTILITY FUNCTIONS
+   * set multiple elements on an object
+   * create DOM element and assign attributes to it.
    */
 
   const setAttributes = (el, attrs) => {
@@ -18,18 +23,27 @@ const constellationImgEnlarge = () => {
 
   const createElem = (el, attrs) => {
     let elem = document.createElement(el);
-    elem.setAttributes(el, attrs);
+    setAttributes(elem, attrs);
     return elem;
   };
 
   /**
-   * App logic
+   * APPLICATION LOGIC
+   * Sort "figure" images from "photo" images
+   * Change title attribute of figures
+   * On click/keyboard evt, capture image attributes: src, alt; 
+   * and set title attribute.
+   * 
+   * With capture attributes, create new figure and append to DOM,
+   * Use css to cover window. 
+   * Add click/keyboard events to remove from DOM when user closes.
    */
 
   const sortFigures = () => {
+
     const allFigures = document.querySelectorAll("figure");
 
-    allFigures.forEach((figure, index) => {
+    allFigures.forEach((figure) => {
       if (figure.querySelector(".figure_name")) {
         let image = figure.querySelector("img");
         handleImage(image);
@@ -40,6 +54,7 @@ const constellationImgEnlarge = () => {
   };
 
   const handleImage = imgObj => {
+
     setAttributes(imgObj, {
       role: "button",
       tabindex: "0",
@@ -49,29 +64,18 @@ const constellationImgEnlarge = () => {
 
     imgObj.addEventListener("click", function(evt) {handleEvt(evt, this);},false);
     imgObj.addEventListener("keyup", function(evt) {handleEvt(evt, this);}, false);
-  };
 
-  const closeFigure = (evt, figureObj) => {
-    let image = figureObj.querySelector("img");
-    image.remove();
-    figureObj.remove();
   };
-
-  /**
-   * TODO: refactor using utility functions above
-   * @param {object} imgAttrs 
-   */
 
   const createFigure = imgAttrs => {
-    const figure = document.createElement("figure");
-    const image = document.createElement("img");
 
-    figure.setAttribute("class", "figure_enlarged");
-    setAttributes(figure, {
-      class: "figure_enlarged",
-      tabindex: "0"
+    const figure = createElem('figure', {
+      'class': 'figure_enlarged', 
+      'tabindex': '0'
     });
-    setAttributes(image, imgAttrs);
+
+    const image = createElem('img', imgAttrs);
+
     figure.addEventListener("click", function(evt) {closeFigure(evt, this);}, false);
     figure.addEventListener("keyup", function(evt) {closeFigure(evt, this);}, false);
 
@@ -86,7 +90,7 @@ const constellationImgEnlarge = () => {
     evt.type === "click" ? handleClick(evt, imgObj) : handleKeyup(evt, imgObj);
 
     function handleClick(evt, imgObj) {
-      evtReaction(evt, imgObj);
+      evtReaction(imgObj);
       evt.target.removeEventListener("keyup", function(evt) {handleEvt(evt, this);},false);
     }
 
@@ -95,12 +99,12 @@ const constellationImgEnlarge = () => {
       if (evt.keyCode === 9) {
         return;
       } else {
-        evtReaction(evt, imgObj);
+        evtReaction(imgObj);
       }
-      evt.target.removeEventListener("keyup",function(evt) {checkEvt(evt, this);},false);
+      evt.target.removeEventListener("keyup",function(evt) {handleEvt(evt, this);},false);
     }
 
-    function evtReaction(evt, omgObj) {
+    function evtReaction(imgObj) {
       let imgAttrs = {
         title: "click to close image",
         class: "img_enlarged",
@@ -111,17 +115,26 @@ const constellationImgEnlarge = () => {
 
       createFigure(imgAttrs);
     }
+
   };
 
+  const closeFigure = (evt, figureObj) => {
+    let image = figureObj.querySelector("img");
+    image.remove();
+    figureObj.remove();
+  };
+
+
  /**
-   * Initialize
+   * INITIALIZE
    */
 
-  if (hasFigures) {
+  if (hasFeature) {
     sortFigures();
   } else {
     return;
   }
+
 };
 
 export default constellationImgEnlarge;

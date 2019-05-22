@@ -599,7 +599,7 @@ tr:nth-child(even) td {
 	margin-bottom: 42px;
 	color: #666;
 	background: #FFF;
-	border: 1px solid: #ededed;
+	border: 1px solid #ededed;
 	padding: 18px;
 }
 .photo-right p.cr {
@@ -1123,42 +1123,74 @@ misc
   margin-top: 20px;
 }
 
-.ec_hidden>div {
-	display:none;
+/* CSS FOR EXPAND COLLAPSE (DISCLOSURE) */
+
+.ec_expanded {
+    display: block;
 }
 
-.ec_visible>div {
-	display:block;
+.ec_collapsed {
+    display: none;
 }
 
+.ec_expand[aria-expanded="false"]::after {
+    display: inline;
+    content: '\025BC';
+    margin-left: 5px;
+}
 
+.ec_expand[aria-expanded="true"]::after {
+    display: inline;
+    content: '\025B2';
+    margin-left: 5px;
+}
 
 .text_container div {
-	border-bottom:3px solid #DDD;
-	margin-bottom: 18px;
-}
-.text_container h4 {
-	text-align:center;
-	font-weight: 600;
-	font-size: 18px;
-	border-bottom: 3px solid #DDD;
-	cursor: pointer;
-	color: #C92B56;
+    border-bottom: 3px solid #DDD;
+    margin-bottom: 18px;
 }
 
-	p.close {
-		font-size: 14px;
-		font-weight:bold;
-		cursor:pointer;
-		text-align:right;
-	}
-		p.close span {
-			font-weight: 300 !important;	
-		}
-		
-	.pink {
-		color: #C92B56;
-    }
+.text_container h4 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 3px solid #ddd;
+    color: #C92B56;
+}
+
+button.ec_expand {
+    display: inline-block;
+    padding-bottom: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    background-color: #fafafa;
+    color: #C92B56;
+    cursor: pointer
+}
+
+button.ec_collapse {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom:20px;
+    margin-right: 40px;
+    margin-left: auto;
+    border: none;
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+button.ec_collapse span {
+    font-weight: 300 !important;
+}
+
+/* CSS FOR ENLARGE IMAGES */
+
     
 figure.figure_enlarged {
     position: fixed;
