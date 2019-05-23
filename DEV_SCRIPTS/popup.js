@@ -4,17 +4,20 @@ const constellationTipBox = () => {
     //// CONSTANTS /////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////	
 
-    const hasFeature = document.querySelectorAll("[class^=tipBox]").length > 0;
+    const tipFeatureNL = document.querySelectorAll("[class^=tipBox]");
+    const tipFeatureArray = Array.prototype.slice.call(tipFeatureNL);
+    const hasFeature = tipFeatureArray.length > 0;
 
     ////////////////////////////////////////////////////////////////////
     //// UTILITY FUNCTIONS /////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////	
   
     // set multiple attributes for an element
-    function setAttributes(el, attrs) {
-      Object.keys(attrs).forEach(function (attr) {
-        el.setAttribute(attr, attrs[attr]);
-      });
+    function setAttributes (el, attrs) {
+      let keysArray = Object.keys(attrs);
+      for(var i = 0; i < keysArray.length; i++) {
+        el.setAttribute(keysArray[i], attrs[keysArray[i]]);
+      }
     }
   
     // create a button element
@@ -36,7 +39,6 @@ const constellationTipBox = () => {
     ////////////////////////////////////////////////////////////////////
   
     const page = {
-      triggers: document.querySelectorAll("[data-type=tipTrigger]"),
       boxes: document.querySelectorAll("[class^=tipBox]"),
       manageScreen: function (status) {
         if (status === "open") {
@@ -63,9 +65,13 @@ const constellationTipBox = () => {
         }
       },
       setBoxes: function () {
-        this.boxes.forEach(function (thisBox) {
-          box.setBox(thisBox);
-        });
+        let boxesArray = Array.prototype.slice.call(this.boxes);
+
+        for(var i = 0; i <boxesArray.length; i++) {
+          let currentBox = boxesArray[i];
+          box.setBox(currentBox);
+        }
+
       },
       setEsc: function () {
         document.addEventListener("keydown", function (event) {

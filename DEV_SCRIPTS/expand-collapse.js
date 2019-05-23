@@ -1,7 +1,8 @@
 const constellationExpandCollapse = () => {
 
-    const toggleBtns = document.querySelectorAll("[aria-expanded][aria-controls]");
-    const hasFeature = toggleBtns.length > 0;
+    const toggleBtnsNL = document.querySelectorAll("[aria-expanded][aria-controls]");
+    const toggleBtnsArray = Array.prototype.slice.call(toggleBtnsNL);
+    const hasFeature = toggleBtnsArray.length > 0;
     let isCollapsed, currentString, currentContent, currentToggle, ecString, ecContent, collapseBtn;
 
     function ecToggle(currentObj) {
@@ -27,16 +28,18 @@ const constellationExpandCollapse = () => {
     }
 
     function initFeature() {
-        toggleBtns.forEach(function(btn) {
+
+        for(var i = 0; i < toggleBtnsArray.length; i++) {
+            let btn = toggleBtnsArray[i];
             ecString = btn.getAttribute("aria-controls");
             ecContent = document.querySelector("#"+ ecString);
             collapseBtn = document.querySelector("[name='" + ecString + "']");
     
             ecContent.classList.add("ec_collapsed");
             btn.addEventListener("click", function() {ecToggle(this)}, false);
-            collapseBtn.addEventListener("click", function() {ecCollapse(this)}, false);
-    
-       }); 
+            collapseBtn.addEventListener("click", function() {ecCollapse(this)}, false);            
+        }
+
     }
 
     if(hasFeature) {

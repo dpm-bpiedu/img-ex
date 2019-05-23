@@ -5,7 +5,8 @@ const constellationImgEnlarge = () => {
    * hasFigures used in intialization. If false, returns
    * section is main page element; enlarged image appended to it
    */
-  const featuresArray = [...document.querySelectorAll('.figure_name')];
+  const featuresNodeList = document.querySelectorAll('.figure_name');
+  const featuresArray = Array.prototype.slice.call(featuresNodeList);
   const hasFeature = featuresArray.length > 0;
   const section = document.querySelector("section.page");
 
@@ -42,10 +43,11 @@ const constellationImgEnlarge = () => {
 
   const sortFigures = () => {
 
-    const allFigures = [...document.querySelectorAll("figure")];
+    const figuresNodeList = document.querySelectorAll('figure');
+    const figuresArray = Array.prototype.slice.call(figuresNodeList);
 
-    for(var i = 0;i < allFigures.length; i++) {
-      let currentFigure = allFigures[i];
+    for(var i = 0; i < figuresArray.length; i++) {
+      let currentFigure = figuresArray[i];
       let isFigure = currentFigure.querySelector('.figure_name') != undefined;
 
       if(isFigure) {
@@ -118,6 +120,7 @@ const constellationImgEnlarge = () => {
       };
 
       createFigure(imgAttrs);
+
     }
 
   };
@@ -128,8 +131,7 @@ const constellationImgEnlarge = () => {
     figureObj.remove();
   };
 
-
- /**
+/**
    * INITIALIZE
    */
 
