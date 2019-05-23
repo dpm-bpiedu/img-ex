@@ -1,4 +1,4 @@
-const constellationTipBox = () => {
+ (function constellationTipBox() {
 
     ////////////////////////////////////////////////////////////////////
     //// CONSTANTS /////////////////////////////////////////////////////
@@ -208,9 +208,9 @@ const constellationTipBox = () => {
       return;
     } 
  
-};
+}());
 
-export default constellationTipBox;
+
 
 
 

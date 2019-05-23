@@ -1,4 +1,4 @@
-const constellationExpandCollapse = () => {
+(function constellationExpandCollapse() {
 
     const toggleBtnsNL = document.querySelectorAll("[aria-expanded][aria-controls]");
     const toggleBtnsArray = Array.prototype.slice.call(toggleBtnsNL);
@@ -51,9 +51,9 @@ const constellationExpandCollapse = () => {
         return;
     }
   
-};
+}());
 
-export default constellationExpandCollapse;
+
 
 
 

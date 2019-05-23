@@ -29,6 +29,10 @@ const constellationImgEnlarge = () => {
     return elem;
   };
 
+  const  removeEl = (el) => {
+    el.parentNode.removeChild(el);
+  }  
+
   /**
    * APPLICATION LOGIC
    * Seperate "figure" images from "photo" images
@@ -125,10 +129,8 @@ const constellationImgEnlarge = () => {
 
   };
 
-  const closeFigure = (evt, figureObj) => {
-    let image = figureObj.querySelector("img");
-    image.remove();
-    figureObj.remove();
+  const closeFigure = (figureObj) => {
+    removeEl(figureObj);
   };
 
 /**

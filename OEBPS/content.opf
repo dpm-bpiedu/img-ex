@@ -6,7 +6,7 @@
  xmlns:dcterms="http://purl.org/dc/terms/"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:opf="http://www.idpf.org/2007/opf">	
-	<dc:title>imgXL</dc:title>
+	<dc:title>test</dc:title>
 	<dc:language xsi:type="dcterms:RFC3066">en</dc:language>
 	<meta name="cover" content="cover"/>
 	<dc:identifier id="dcidid">imgXL</dc:identifier>
